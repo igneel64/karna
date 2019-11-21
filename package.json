@@ -1,0 +1,23 @@
+{
+  "name": "minipack-gre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel-node lib/index.js",
+    "postcompile": "node dist/bundle.js"
+  },
+  "keywords": [],
+  "author": "Peter Perlepes <igneel64>",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/traverse": "^7.7.2",
+    "graceful-fs": "^4.2.3"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1"
+  }
+}
