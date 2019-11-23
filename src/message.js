@@ -1,2 +1,2 @@
-import n from "./msg/message2.js";
+import n from "./msg/message2";
 module.exports = "message" + n;

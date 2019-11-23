@@ -1,10 +1,9 @@
 {
-  "name": "minipack-gre",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "karna",
+  "version": "0.0.1",
+  "description": "Simple bundler in the works",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "babel-node lib/index.js",
     "postcompile": "node dist/bundle.js"
   },
@@ -13,11 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/traverse": "^7.7.2",
-    "graceful-fs": "^4.2.3"
+    "graceful-fs": "^4.2.3",
+    "@babel/preset-env": "^7.7.1"
   },
   "devDependencies": {
-    "@babel/node": "^7.7.0",
-    "@babel/preset-env": "^7.7.1"
+    "@babel/node": "^7.7.0"
   }
 }
