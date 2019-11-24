@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "description": "Simple bundler in the works",
   "main": "./lib/index.js",
+  "bin": "./lib/Runner.js",
   "scripts": {
     "compile": "babel-node lib/index.js",
-    "postcompile": "node dist/bundle.js"
+    "postcompile": "node dist/bundle.js",
+    "e2e": "jest -t e2e"
   },
   "keywords": [],
   "author": "Peter Perlepes <igneel64>",
@@ -13,11 +15,21 @@
   "dependencies": {
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.1",
     "@babel/traverse": "^7.7.2",
     "graceful-fs": "^4.2.3",
-    "@babel/preset-env": "^7.7.1"
+    "sade": "^1.6.1"
   },
   "devDependencies": {
-    "@babel/node": "^7.7.0"
+    "@babel/node": "^7.7.0",
+    "@babel/plugin-transform-regenerator": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.4",
+    "@babel/runtime": "^7.7.4",
+    "@types/jest": "^24.0.23",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "jest-puppeteer": "^4.3.0",
+    "node-static": "^0.7.11",
+    "puppeteer": "^2.0.0"
   }
 }
