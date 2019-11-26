@@ -5,8 +5,7 @@
   "main": "./lib/index.js",
   "bin": "./lib/Runner.js",
   "scripts": {
-    "compile": "babel-node lib/index.js",
-    "postcompile": "node dist/bundle.js",
+    "compile": "babel-node ./lib/Runner.js build",
     "e2e": "jest -t e2e"
   },
   "keywords": [],
