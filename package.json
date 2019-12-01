@@ -5,8 +5,8 @@
   "main": "./lib/index.js",
   "bin": "./lib/Runner.js",
   "scripts": {
-    "compile": "babel-node ./lib/Runner.js build",
-    "e2e": "jest -t e2e"
+    "e2e": "jest -t e2e",
+    "test": "jest --testPathPattern=lib"
   },
   "keywords": [],
   "author": "Peter Perlepes <igneel64>",
