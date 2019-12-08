@@ -1,0 +1,9 @@
+{
+  "json" : 1,
+  "test" : false,
+  "person" : {
+    "name" : "Peter",
+    "surname" : "Perlepes"
+  },
+  "valid" : "valid"
+}

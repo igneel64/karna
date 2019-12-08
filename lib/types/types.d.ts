@@ -26,7 +26,7 @@ export interface Resolver{
   /**
    * @description Resolves an extensionless import based on the Configuration allowed extensions
    * @param extensionlessPath Path for an extensionless import
-   * @returns Resolved path with extension
+   * @returns Resolved path with extension relative to cwd() e.g. src/message.js
    */
   resolveExtensionInOrder(extensionlessPath: string): string;
   /**
