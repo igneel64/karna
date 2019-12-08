@@ -17,7 +17,8 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/traverse": "^7.7.2",
     "graceful-fs": "^4.2.3",
-    "sade": "^1.6.1"
+    "sade": "^1.6.1",
+    "terser": "^4.4.2"
   },
   "devDependencies": {
     "@babel/node": "^7.7.0",
