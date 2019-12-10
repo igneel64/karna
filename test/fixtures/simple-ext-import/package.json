@@ -1,0 +1,6 @@
+{
+  "name": "simple-ext-import",
+  "dependencies": {
+    "terser": "^4.4.2"
+  }
+}

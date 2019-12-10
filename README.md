@@ -13,6 +13,8 @@ For now it can bundle only JavaScript and JSON files with some basic transformat
 
 ## Testing & Validation
 
+:warning: Before running the tests you have to install the dependencies of the [import dependencies fixture](test/fixtures/simple-ext-import/package.json).
+
 To run the tests, simply run the `npm run test` command.
 ### End To End
-Additionally there is `npm run e2e` that runs a real scenario for a bundler: Build, Ship to the browser, Validate the result.
+Additionally there is an `e2e` script that runs a real scenario for a bundler: Build, Ship to the browser, Validate the result.

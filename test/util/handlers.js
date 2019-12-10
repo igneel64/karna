@@ -1,3 +1,4 @@
+// TODO add the test name on the handler (Prolly as a function argument on its export)
 const CompilationTimingHandler = {
   get: (target, propKey, receiver) => {
     const result = Reflect.get(target, propKey);
