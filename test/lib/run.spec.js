@@ -1,9 +1,11 @@
+import { toMatchFile } from 'jest-file-snapshot';
 import karna from "../../lib/index";
 import path from "path";
 import fs from "graceful-fs";
 import Compilation from "../../lib/Compilation";
 import { CompilationTimingHandler } from "../util/handlers";
 
+expect.extend({ toMatchFile });
 const FIXTURES_DIR = path.resolve(__dirname, "../fixtures");
 
 describe("sane bundles", () => {
@@ -14,9 +16,13 @@ describe("sane bundles", () => {
       const prevDir = process.cwd();
       process.chdir(resolvedDir);
 
-      const result = await karna({ output: "./dist", entry: "./src/index.js"}, $compilationProxy);
+      await karna({ output: "./dist", entry: "./src/index.js"}, $compilationProxy);
 
       process.chdir(prevDir);
-      return result;
+      const outputDir = path.resolve(resolvedDir, 'dist');
+      const outputFiles = fs.readdirSync(outputDir);
+      outputFiles.forEach( file => {
+        expect(fs.readFileSync(path.resolve(outputDir, file), { encoding: "utf8" })).toMatchFile();
+      });
     });
 });

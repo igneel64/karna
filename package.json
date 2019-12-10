@@ -28,6 +28,7 @@
     "@types/jest": "^24.0.23",
     "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
+    "jest-file-snapshot": "^0.3.8",
     "jest-puppeteer": "^4.3.0",
     "node-static": "^0.7.11",
     "puppeteer": "^2.0.0"
