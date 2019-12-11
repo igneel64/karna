@@ -33,5 +33,5 @@ export interface Resolver{
    * @param moduleName Name of the resource module to include
    * @returns Resolved root path for new module 
    */
-  resolveRootModule(moduleName: string): string;
+  resolveRootModule(moduleName: string): Promise<string>;
 }
