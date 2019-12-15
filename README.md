@@ -7,9 +7,13 @@
 
 ## Features
 
-For now it can bundle only JavaScript and JSON files with some basic transformations.
-
+- Babel preset-env applied by default :heavy_check_mark:
+- Supports JS, JSON and JSX files :heavy_check_mark:
 - Build is minified using [Terser](https://github.com/terser/terser) :heavy_check_mark:
+- Automatic resolution of extensionless imports :heavy_check_mark:
+
+### Conventions
+- Transforms external lib imports/exports to CommonJS
 
 ## Testing & Validation
 
@@ -18,3 +22,8 @@ For now it can bundle only JavaScript and JSON files with some basic transformat
 To run the tests, simply run the `npm run test` command.
 ### End To End
 Additionally there is an `e2e` script that runs a real scenario for a bundler: Build, Ship to the browser, Validate the result.
+
+## Steps ahead & known issues that will be fixed
+- [ ] Definitions e.g. (As webpack Define plugin)
+- [ ] Browser package.json field as an object
+- [ ] Bundle and run a React/ReactDOM project

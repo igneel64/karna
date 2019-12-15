@@ -1,12 +1,12 @@
 import karna from "../../lib/index";
 import initializeServer, { server } from "./static"
 
-beforeAll(() => {
-  karna({
+beforeAll(async () => {
+  await karna({
     entry: "./test/e2e/mock_project_browser/src/index.js",
     output: "./test/e2e/mock_project_browser/public/"
-  })
-  return initializeServer()
+  });
+  return initializeServer();
 })
 
 describe('e2e', () => {
